@@ -65,17 +65,17 @@ perl P_test.pl 1 species_quartets.csv tree.newick /path/to/input/files/ /path/to
 
 First three files contain information about parallel evolution:
 
-P_test_with_threshold.csv
-P_test_with_pseudocounts.csv
-P_test_raw_counts.csv
+1) P_test_with_threshold.csv
+2) P_test_with_pseudocounts.csv
+3) P_test_raw_counts.csv
 
 Two of them contain P test values, calculated independently for 6 classes of mutations (AC, AT, AG, CT, CG, TG). As sometimes there are very few parallel substitutions (when little sample of genes is used or when species are closely related), P test could invoke division by zero. To avoid such cases, we use two solutions. In first one we add threshold value for number of parallel substitutions. If number of parallel substitutions is less than 3 for particular dinucleotide class, P test returns NA. In second approach we add pseudocounts.
 The third file contains raw counts of different mutation patterns. It can be used, if you wish to recalculate some statistics.
 
 Other three files contain analog of dn/ds test for two species from path II (species 3 and 4). Rate of synonymous substitutions is counted at 4-fold degenerate sites, while rate of nonsynonymous substitutions is based on non-degenerate sites. I added dn/ds to the output as a control: it should be always much lower than one, while P test could give even higher than one values.
 
-dn_ds_analog_with_threshold.csv
-dn_ds_analog_with_pseudocounts.csv
-dn_ds_analog_raw_counts.csv
+4) dn_ds_analog_with_threshold.csv
+5) dn_ds_analog_with_pseudocounts.csv
+6) dn_ds_analog_raw_counts.csv
 
 First two files contain dn/ds analog, calculated independently for 6 classes of mutations (AC, AT, AG, CT, CG, TG). Third file contains raw counts of different mutation patterns in path II.
