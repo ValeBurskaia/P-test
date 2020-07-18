@@ -1,18 +1,47 @@
-P-test estimates the rate of parallel molecular evolution at the genome-wide level. The approach is described fully in our paper:
-https://academic.oup.com/gbe/article/doi/10.1093/gbe/evaa138/5870375?fbclid=IwAR03Zywh-So4xTERD5PAkqkE5YZE0KE3oJKysoz_P8kprNSHg5P20iiFsDQ
+<!--
+---
+output:
+  html_document:
+    keep_md: yes
+---
 
-MAIN SCRIPT
+-->
+
+# *P-test* - a tool for estimating the rate of parallel molecular evolution at the genome-wide level
+
+
+<!-- ########################################################################################################## -->
+## Introduction
+<!-- ########################################################################################################## -->
+
+The *P-test* approach is described fully in our paper, available in [Genome Biology and Evolution](https://academic.oup.com/gbe/article/doi/10.1093/gbe/evaa138/5870375?fbclid=IwAR03Zywh-So4xTERD5PAkqkE5YZE0KE3oJKysoz_P8kprNSHg5P20iiFsDQ)
+
+
+***
+
+<!-- ########################################################################################################## -->
+## Main script
+<!-- ########################################################################################################## -->
 
 The P_test.pl script requirs perl 5 (tested on perl-5.30.1) and some specific (mainly BioPerl) libraries: Bio::AlignIO, Bio::SimpleAlign, Bio::TreeIO, Bio::SeqIO, List::Util
 
-EXAMPLE FILES
+***
+
+<!-- ########################################################################################################## -->
+## Example files
+<!-- ########################################################################################################## -->
 
 Other files are added to the repository for test run:
 1) Each line of species_quartets.csv file contains comma delimited list of four species. Last common ancestor (LCA) of first two species and LCA of other two species should be younger, than LCA of all four species. In given tree topology script looks for substitutions, which appeared independently in path I (species 1 and 2) and in path II (species 3 and 4).
 2) The tree.newick file contains phylogenetic tree of species, which gonna be analyzed (other species can be included in the tree too). The tree is used to calculate distance between LCAs of path I and path II.
 3) The test_alignments.zip archive contains 800 fasta files with in-frame alignments of protein-coding sequences.
+ 
 
-EXAMPLE RUN
+***
+
+<!-- ########################################################################################################## -->
+## Example run
+<!-- ########################################################################################################## -->
 
 P_test.pl script needs 6 arguments:
 
@@ -28,7 +57,11 @@ So the command should look like this:
 perl P_test.pl 1 species_quartets.csv tree.newick /path/to/input/files/ /path/to/input/alignments/ /path/for/output/files
 
 
-OUTPUT FILES
+***
+
+<!-- ########################################################################################################## -->
+## Output
+<!-- ########################################################################################################## -->
 
 First three files contain information about parallel evolution:
 
@@ -49,4 +82,4 @@ dn_ds_analog_with_pseudocounts.csv
 
 dn_ds_analog_raw_counts.csv
 
- First two files contain dn/ds analog, calculated independently for 6 classes of mutations (AC, AT, AG, CT, CG, TG). Third file contains raw counts of different mutation patterns in path II.
+First two files contain dn/ds analog, calculated independently for 6 classes of mutations (AC, AT, AG, CT, CG, TG). Third file contains raw counts of different mutation patterns in path II.
