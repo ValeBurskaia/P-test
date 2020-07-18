@@ -14,7 +14,7 @@ output:
 ## Introduction
 <!-- ########################################################################################################## -->
 
-The *P-test* approach is described fully in our paper, available in [Genome Biology and Evolution](https://academic.oup.com/gbe/article/doi/10.1093/gbe/evaa138/5870375?fbclid=IwAR03Zywh-So4xTERD5PAkqkE5YZE0KE3oJKysoz_P8kprNSHg5P20iiFsDQ)
+The *P-test* perl script allows users to compare ratios of synonymous and nonsynonymous parallel evolution in groups of four species. The main advantage of the approach is proper normalization of parallel synonymous and parallel nonsynonymous substitution counts. The method works on large samples of protein-coding sequences: it's best on hundreds or thousands of genes. The *P-test* approach is described fully in our paper, available in [Genome Biology and Evolution](https://academic.oup.com/gbe/article/doi/10.1093/gbe/evaa138/5870375?fbclid=IwAR03Zywh-So4xTERD5PAkqkE5YZE0KE3oJKysoz_P8kprNSHg5P20iiFsDQ).
 
 
 ***
@@ -23,7 +23,7 @@ The *P-test* approach is described fully in our paper, available in [Genome Biol
 ## Main script
 <!-- ########################################################################################################## -->
 
-The P_test.pl script requirs perl 5 (tested on perl-5.30.1) and some specific (mainly BioPerl) libraries: Bio::AlignIO, Bio::SimpleAlign, Bio::TreeIO, Bio::SeqIO, List::Util
+The P_test.pl script requirs perl 5 (tested on perl-5.30.1) and some specific (mainly BioPerl) libraries: Bio::AlignIO, Bio::SimpleAlign, Bio::TreeIO, Bio::SeqIO, List::Util.
 
 ***
 
