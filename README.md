@@ -2,9 +2,11 @@ P-test estimates the rate of parallel molecular evolution at the genome-wide lev
 https://academic.oup.com/gbe/article/doi/10.1093/gbe/evaa138/5870375?fbclid=IwAR03Zywh-So4xTERD5PAkqkE5YZE0KE3oJKysoz_P8kprNSHg5P20iiFsDQ
 
 MAIN SCRIPT
+
 The P_test.pl script requirs perl 5 (tested on perl-5.30.1) and some specific (mainly BioPerl) libraries: Bio::AlignIO, Bio::SimpleAlign, Bio::TreeIO, Bio::SeqIO, List::Util
 
 EXAMPLE FILES
+
 Other files are added to the repository for test run:
 1) Each line of species_quartets.csv file contains comma delimited list of four species. Last common ancestor (LCA) of first two species and LCA of other two species should be younger, than LCA of all four species. In given tree topology script looks for substitutions, which appeared independently in path I (species 1 and 2) and in path II (species 3 and 4).
 2) The tree.newick file contains phylogenetic tree of species, which gonna be analyzed (other species can be included in the tree too). The tree is used to calculate distance between LCAs of path I and path II.
